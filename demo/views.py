@@ -10,8 +10,8 @@ class FirstView(APIView):
 
     def get(self, request):
         print("inininin")
-        token = request.GET.get('hub.VERIFY_TOKEN')
-        challenge = request.GET.get('hub.CHALLENGE')
+        token = request.GET.get('hub.verify_token')
+        challenge = request.GET.get('hub.challenge')
         print(token)
         if token == "test":
             print(request.GET.get('hub.verify_token'),"token")
